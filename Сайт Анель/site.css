@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.article {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.article h2 {
+    color: #333;
+}
+
+.article .lead {
+    font-size: 1.2em;
+}
+
+.btn {
+    transition: transform 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+script.js
+javascript
+Копировать код
+document.addEventListener('DOMContentLoaded', () => {
+    // Click event listener
+    const readMoreButtons = document.querySelectorAll('.read-more-btn');
+    readMoreButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            alert('Read more about this article!');
+        });
+    });
+
+    // Mouseover event listener
+    const hoverButton = document.querySelector('.hover-btn');
+    hoverButton.addEventListener('mouseover', () => {
+        hoverButton.style.backgroundColor = 'red';
+        hoverButton.style.color = 'white';
+    });
+    hoverButton.addEventListener('mouseout', () => {
+        hoverButton.style.backgroundColor = 'green';
+        hoverButton.style.color = 'white';
+    });
+
+    // Keypress event listener
+    document.addEventListener('keypress', (event) => {
+        if (event.key === 'Enter') {
+            alert('Enter key pressed!');
+        }
+    });
+});
